@@ -1,0 +1,17 @@
+package rules
+
+import io.mucc.model.Producto
+
+rule "oferta Diamante"
+    when
+        productObjetc: Producto(tipo=="Diamante")
+    then
+        productObjetc.setDescuento(15);
+end
+
+rule "oferta Oro"
+    when
+        productoObjeto: Producto(tipo=="Oro")
+    then
+        productoObjeto.setDescuento(25);
+end
